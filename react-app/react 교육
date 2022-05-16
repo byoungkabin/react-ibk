@@ -271,6 +271,7 @@ style component  : StyledComponent.jsx 참조
 
 3. data에 따른 styling
 
+vscode styple component
 
 <라우팅 13장>
 Nuxt, Next, Nest ?
@@ -292,6 +293,51 @@ async / await 개념이 나옴 es8 : promise기반 비동기 함수에 사용. 1
 ctrl + c로 현재 화면 종료후 아래 명령어 입력
 npm i axios
 
+<axios>
+get방식으로 가져온다.
+promise기반 비동기 
 
 
+<context api> 15장 393페이지
+전역상태관리
+redux
+mobx
+recoil : facebook에서 만든 것
+useContext : 성능상의 문제로 잘 사용 안함. 큰 프로젝트에서 안 어울림, 효율성 문제
 
+
++++++++++++++++++++++++
+accordian
+
+modal
+drop down
+
+** props로 데이터 넘길때 예
+ ** <Accordian data={accordianData} />**
+
+import Accordian from "./Accordian";
+import { accordianData } from "../../datas/bootstrap";
+
+const Bootstrap = () => {
+  return (
+    <>
+      <Accordian data={accordianData} />
+    </>
+  );
+};
+--------------------------------
+import styled from "styled-components";
+
+const Accordian = ({data }) => {
+  return (
+    <List>
+      {data.map(({ id, title, content }) => (
+        <Item key={id}>
+          <Header>{title}</Header>
+          <Body>{content}</Body>
+        </Item>
+      ))}
+    </List>
+  );
+};
+===========================
