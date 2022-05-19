@@ -341,3 +341,49 @@ const Accordian = ({data }) => {
   );
 };
 ===========================
+
+<0519일 교육>
+월요일 교육 리뷰 
+- todo에서 체크여부 저장
+  : 클릭 -> 데이터 변화 -> 변화를 화면에 적용  (todo-items.jsx, index.jsx 참조)
+
+  const Item = ({ data, onDelete, onChecked }) => {
+  const { id, text, isDone } = data;
+  const handleClick = () => onDelete(id);
+  const handleChange = () => {
+    // 1.data  현재 isDone 값을 반대로
+    onChecked(id);
+    // 2.input의 value(check 여부)를   isDone
+  };
+
+  return (
+    <Container key={id}>
+      <label>
+        <input type="checkbox" checked={isDone} onChange={handleChange} />
+        <Content isDone={isDone}>{text}</Content>
+      </label>
+      <BtnDelete onClick={handleClick}>삭제</BtnDelete>
+    </Container>
+  );
+};
+
+
+- 비동기
+ async : axios  (axios.jsx  counter.jsx 참조)
+- accordian (accordian.jsx 참조)
+ : activeIndex  선언하고 관리, data는 props를 통해 전달
+- dropdown dropdown.jsx참조
+ : 
+- carousel carousel.jsx참조
+  : 
+ 
+ carousel 응용(인스타그램) :  useEffect, useCallback, useState, setTimeout, clearTimeout 기능 사용 필요
+
+0519일
+ - modal 
+ - 영화&책 검색사이트
+ - axios react-router
+
+부모가 자식을 컨트롤 하려면 : props사용
+자식이 부모 변수를 제어하려면 (index.jsx참조  onClose .....)
+: 

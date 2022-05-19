@@ -13,9 +13,9 @@ const Carousel = ({ data }) => {
     } else if (nextIndex > lastIndex) {
       nextIndex = 0;
     }
-
     setActiveIndex(nextIndex);
   };
+
   return (
     <Container>
       <List>

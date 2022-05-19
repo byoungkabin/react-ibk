@@ -1,0 +1,44 @@
+1. JVM설치 : OPEN JDK 17 https://adoptium.net/
+
+2. 환경변수 추가 : 1) JAVA_HOME : C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot
+
+2) path 변수 확인
+
+3. IDE : intellij 설치
+
+bkin@naver.com dlsqudrkq1!i
+byoungkabin
+
+<dependency 설정 추가 항목 참조>
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.7'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.6.7'
+    implementation 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+web, lombok actuator jpa mariadb
+
+
+<application.properties>
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+
+spring.datasource.url=jdbc:mariadb://localhost:3306/mydb
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+
+spring.sql.init.mode=always
+spring.sql.init.data-locations=classpath:data.sql
+spring.jpa.defer-datasource-initialization=true
+
+spring.servlet.multipart.max-file-size = -1
+spring.servlet.multipart.max-request-size = 20MB
+
+
+https://joont92.github.io/jpa/JPQL   : 참고 사이트

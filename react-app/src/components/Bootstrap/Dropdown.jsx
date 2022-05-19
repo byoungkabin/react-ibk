@@ -15,7 +15,7 @@ const Dropdown = () => {
         setIsShow(false);
       }
     };
-    document.body.addEventListener("click", onClick);
+    document.body.addEventListener("click", onClick); // 1번만 받기위해서 body에 설정함.
     return () => {
       document.body.removeEventListener("click", onClick);
     };
@@ -55,6 +55,7 @@ const Button = styled.button`
 const Menu = styled.ul`
   display: ${({ isActive }) => !isActive && "none"};
   position: absolute;
+  z-index: 10;
   top: 45px;
   background: #fff;
   margin: 0;
