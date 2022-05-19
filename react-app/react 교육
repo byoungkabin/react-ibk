@@ -387,3 +387,25 @@ const Accordian = ({data }) => {
 부모가 자식을 컨트롤 하려면 : props사용
 자식이 부모 변수를 제어하려면 (index.jsx참조  onClose .....)
 : 
+
+
+<naver>
+서버 종료후 해당 폴더에서 아래  sw설치
+
+npm i axios styled-components react-router-dom
+
+<리액트 라이브러리>
+: axios, react-router-dom, styled-components는 필수 라이브러리
+추가적 라이브러리
+recoil rudux : 전역 상태 관리(로그인 여부)
+react-query (api 관련)
+
+
+네이버  오픈api
+
+에러 : cors:브라우저 js에서 다른 도메인, 포트로 http요청하면 요청을 제한함. 
+해결방안 :
+1.요청서버에서 프론트도메인을 허용
+2.서버를 직접만들어서 프론트->커스텀서버->naver서버로 호출
+3.webpack dev server의 proxy서버 이용
+ : package.json에 프록시 추가 및 도메인 입력하고, 원 소스에서는 도메인 제외. 
